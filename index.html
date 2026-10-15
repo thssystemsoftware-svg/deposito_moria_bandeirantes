@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito Moriá - Tend Tudo | Elétrica, Hidráulica e Construção</title>
+    <meta name="description" content="Depósito Moriá Tend Tudo - Tudo em elétrica, conexões, hidráulica, ferragens, tintas e utilidades.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Depósito Moriá - Tend Tudo | Construção">
+    <meta property="og:description" content="Tudo em elétrica, conexões, hidráulica, ferragens, tintas e utilidades.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons (Otimizado: Carregamento assíncrono para não bloquear a renderização) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Tailwind CSS -->
+    <!-- AVISO DE PERFORMANCE [CRITICAL]: Em ambiente de produção, remova o script CDN abaixo. 
+         Compile o Tailwind localmente e importe o arquivo CSS estático minificado. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        moria: {
+                            red: '#c62828', // Vermelho escuro da fachada
+                            yellow: '#fbc02d', // Amarelo/Dourado da logo
+                            dark: '#111111',
+                            darker: '#0a0a0a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #fbc02d, #fff59d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #111111;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23222222' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <header class="bg-moria-dark text-white sticky top-0 z-50 shadow-lg border-b border-moria-red/50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- Logo Atualizada (Sem fundo e otimizada) -->
+            <a href="#" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded-lg" aria-label="Ir para o início">
+                <img src="logo-removebg-preview.jpg" alt="Logo Depósito Moriá Tend Tudo" width="150" height="48" fetchpriority="high" class="h-12 md:h-16 w-auto object-contain transform transition-transform group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x150/5D4037/fbc02d?text=Dep%C3%B3sito+Mori%C3%A1';">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex gap-8 items-center font-medium text-sm" aria-label="Navegação Principal">
+                <a href="#inicio" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">Início</a>
+                <a href="#categorias" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">Produtos</a>
+                <a href="#sobre" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">A Loja</a>
+                <a href="#contato" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">Contato</a>
+                <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 shadow-lg shadow-green-900/20 transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-green-400">
+                    <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> (43) 99684-8020
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-white text-2xl focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded-md p-2">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-moria-darker border-t border-gray-800">
+            <nav class="flex flex-col px-4 py-4 gap-2" aria-label="Navegação Mobile">
+                <a href="#inicio" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">Início</a>
+                <a href="#categorias" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">Produtos</a>
+                <a href="#sobre" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">A Loja</a>
+                <a href="#contato" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-pattern relative text-white py-20 lg:py-32 flex items-center border-b-[8px] border-moria-red">
+            <div class="absolute inset-0 bg-gradient-to-r from-moria-dark via-moria-dark/90 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="inline-block bg-moria-red text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider shadow-md">
+                        Sua obra não pode parar!
+                    </div>
+                    <h1 class="font-heading font-black text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 uppercase">
+                        Construção, Elétrica & <span class="gradient-text">Muito Mais.</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl font-light">
+                        O <strong>Depósito Moriá Tend Tudo</strong> é o lugar certo em Londrina para quem busca preço justo, qualidade e variedade. Ferramentas, tintas, utilidades e acabamentos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" class="bg-moria-red hover:bg-red-700 text-white text-center font-bold text-lg py-4 px-8 rounded-lg transition-all shadow-lg shadow-moria-red/30 flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-red-400">
+                            <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i> Fazer Orçamento
+                        </a>
+                        <a href="#categorias" class="bg-transparent border-2 border-white hover:bg-white hover:text-moria-dark text-white text-center font-bold text-lg py-4 px-8 rounded-lg transition-all flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-white">
+                            Ver Departamentos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categorias" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading font-black text-3xl md:text-4xl text-moria-dark uppercase mb-2">Nossos Departamentos</h2>
+                    <div class="w-24 h-1 bg-moria-yellow mx-auto rounded-full mb-4"></div>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">Encontre tudo o que você precisa em um só lugar. Do básico ao acabamento para sua reforma ou construção.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <i class="fa-solid fa-bolt text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Elétrica</h3>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <i class="fa-solid fa-faucet-drip text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Hidráulica</h3>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <i class="fa-solid fa-paint-roller text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Tintas</h3>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <i class="fa-solid fa-toolbox text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Ferragem</h3>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <!-- Ícone Corrigido para Parafusos -->
+                            <i class="fa-solid fa-screwdriver text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Parafusos</h3>
+                    </article>
+                    
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
+                            <i class="fa-solid fa-blender text-2xl text-moria-dark" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-moria-dark uppercase text-sm">Utilidades</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Store Section -->
+        <section id="sobre" class="py-20 bg-moria-dark text-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    
+                    <!-- Imagem da Fachada -->
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-moria-red rounded-lg -z-10"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-moria-yellow rounded-lg -z-10"></div>
+                        
+                        <img src="image_038de4.jpg" alt="Fachada do Depósito Moriá" width="800" height="600" loading="lazy" class="w-full h-auto object-cover rounded-xl shadow-2xl relative z-0 border-4 border-gray-800" onerror="this.onerror=null; this.src='https://placehold.co/800x600/171717/facc15?text=Dep%C3%B3sito+Mori%C3%A1+Tend+Tudo'">
+                        
+                        <div class="absolute bottom-6 left-6 bg-white text-moria-dark font-bold px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-moria-red" aria-hidden="true"></i> Visite-nos!
+                        </div>
+                    </div>
+
+                    <!-- Texto Sobre a Loja -->
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="font-heading font-black text-3xl md:text-4xl text-white uppercase mb-4">
+                            Conheça o <span class="text-moria-yellow">Depósito Moriá</span>
+                        </h2>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Com o compromisso de facilitar sua obra, o <strong class="text-white">Depósito Moriá Tend Tudo</strong> oferece uma grande variedade de materiais para construção, manutenção e reformas.
+                        </p>
+                        <ul class="space-y-6 mb-8">
+                            <li class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-2 rounded-full mt-1">
+                                    <i class="fa-solid fa-cubes text-moria-yellow" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Variedade de Produtos</h4>
+                                    <p class="text-gray-400">De materiais básicos como tubos e conexões até utilidades domésticas.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-2 rounded-full mt-1">
+                                    <i class="fa-solid fa-user-gear text-moria-yellow" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Atendimento Especializado</h4>
+                                    <p class="text-gray-400">Nossa equipe está pronta para tirar suas dúvidas e indicar o material correto.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-gray-800 p-2 rounded-full mt-1">
+                                    <i class="fa-solid fa-handshake-angle text-moria-yellow" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-lg">Preço Justo</h4>
+                                    <p class="text-gray-400">Trabalhamos com excelentes marcas garantindo o melhor custo-benefício.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="py-24 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <div class="inline-block mb-6 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full blur-md opacity-70 animate-pulse"></div>
+                    <!-- Logo do Instagram Corrigida utilizando Ícone Oficial FontAwesome -->
+                    <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" aria-label="Acessar nosso Instagram" class="relative flex items-center justify-center w-24 h-24 bg-white rounded-full focus:outline-none focus:ring-4 focus:ring-pink-500 z-10 shadow-md hover:scale-105 transition-transform duration-300">
+                        <i class="fa-brands fa-instagram text-5xl text-pink-600" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+                <h2 class="font-heading font-black text-3xl md:text-4xl text-moria-dark uppercase mb-4">Acompanhe as Novidades</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto rounded-full mb-6"></div>
+                
+                <p class="text-gray-600 text-lg md:text-xl mb-10 leading-relaxed">
+                    Siga o nosso Instagram oficial <a href="https://www.instagram.com/deposito.moria/" target="_blank" class="font-bold text-moria-dark hover:text-pink-600 transition-colors">@deposito.moria</a> para ficar por dentro da chegada de novos produtos, dicas valiosas para sua obra e o dia a dia da nossa loja!
+                </p>
+                
+                <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all focus:outline-none focus:ring-4 focus:ring-pink-400">
+                    <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i> Seguir @deposito.moria
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact & Map Section -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                    
+                    <!-- Contact Info -->
+                    <div class="w-full lg:w-1/3 bg-moria-dark text-white p-10 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-moria-red rounded-bl-full opacity-20"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-moria-yellow rounded-tr-full opacity-20"></div>
+                        
+                        <h2 class="font-heading font-black text-3xl mb-8 relative z-10">Fale Conosco</h2>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-whatsapp text-green-400 text-2xl" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm mb-1">WhatsApp / Telefone</p>
+                                    <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" class="font-bold text-xl hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded">(43) 99684-8020</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-map-location-dot text-moria-red text-xl" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm mb-1">Endereço</p>
+                                    <p class="font-medium text-base leading-tight pt-1">R. Mal. Hermes da Fonseca, 510<br><span class="text-sm text-gray-300 font-normal">Jardim Sabara, Londrina - PR<br>86188-120</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" class="mt-10 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg text-center transition-colors relative z-10 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-green-400 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i> Chamar no WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Map iframe -->
+                    <div class="w-full lg:w-2/3 h-96 lg:h-auto min-h-[400px]">
+                        <!-- Utilizamos o parâmetro q=... para garantir que o Pin caia sobre o endereço exato -->
+                        <iframe src="https://maps.google.com/maps?q=R.+Mal.+Hermes+da+Fonseca,+510+-+Jardim+Sabara,+Londrina+-+PR,+86188-120&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="grayscale hover:grayscale-0 transition-all duration-500" title="Mapa de localização do Depósito Moriá em Londrina"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-moria-darker text-gray-400 py-10 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex items-center">
+                <!-- Logo Atualizada no Footer -->
+                <img src="logo-removebg-preview.jpg" alt="Logo Depósito Moriá Tend Tudo" width="200" height="80" loading="lazy" class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" onerror="this.onerror=null; this.src='https://placehold.co/200x80/5D4037/fbc02d?text=Mori%C3%A1';">
+            </div>
+            
+            <p class="text-sm text-center">
+                &copy; 2026 Depósito Moriá. Todos os direitos reservados.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" aria-label="Visitar nosso Instagram" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-moria-red hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-moria-red">
+                    <i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-green-400">
+                    <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp" class="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl z-50 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-400 transition-colors" title="Chamar no WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle com Acessibilidade
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isHidden = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+            
+            // Alterar ícone Hamburger para X
+            const icon = btn.querySelector('i');
+            if(isHidden) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+
+        // Fechar menu ao clicar num link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.querySelector('i').classList.remove('fa-xmark');
+                btn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Fechar menu com a tecla Escape (Acessibilidade)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+                toggleMenu();
+                btn.focus();
+            }
+        });
+    </script>
+</body>
+</html>
