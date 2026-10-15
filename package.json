@@ -1,0 +1,17 @@
+{
+  "name": "deposito-moria-bandeirantes",
+  "version": "1.0.0",
+  "description": "Depósito Moriá - Tend Tudo Website",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
