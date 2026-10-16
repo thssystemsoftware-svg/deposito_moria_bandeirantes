@@ -37,3 +37,15 @@
     }
 
 })();
+
+// Vercel Web Analytics for a static site. Keep initialization external for CSP.
+// Local development and file previews do not request Vercel-only endpoints.
+if (location.protocol === "https:" && !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
+    window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+    };
+    const analytics = document.createElement("script");
+    analytics.defer = true;
+    analytics.src = "/_vercel/insights/script.js";
+    document.head.appendChild(analytics);
+}

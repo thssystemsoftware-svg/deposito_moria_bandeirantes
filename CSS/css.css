@@ -48,3 +48,12 @@ footer { padding-bottom: 6rem; }
 .map-link { position: absolute; bottom: 0; left: 0; right: 0; min-height: 3.5rem; padding: 1rem; text-align: center; background: #f9fafb; color: #111; text-decoration: underline; font-weight: 700; }
 .no-js #mobile-menu-btn { display: none; }
 @media (max-width: 1023px) { .no-js #mobile-menu { display: block; } }
+
+/* Identidade visual vetorial, nítida também em telas de alta densidade. */
+.brand-logo { display: block; width: 216px; height: 60px; object-fit: contain; }
+.brand-logo-footer { width: 180px; height: 50px; }
+@media (max-width: 639px) { .brand-logo { width: 180px; height: 50px; } }
+#contato .map-panel { display: flex; flex-direction: column; height: auto; min-height: 456px; padding-bottom: 0; }
+#contato .store-map { flex: 1 1 auto; width: 100%; height: 400px; min-height: 400px; }
+#contato .map-link { position: static; display: block; flex: 0 0 auto; }
+.store-art-note { position: absolute; top: 1rem; right: 1rem; z-index: 1; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; color: #fff; background: #111111dd; }
