@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,72 +11,27 @@
     <meta property="og:title" content="Depósito Moriá - Tend Tudo | Construção">
     <meta property="og:description" content="Tudo em elétrica, conexões, hidráulica, ferragens, tintas e utilidades.">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Icons (Otimizado: Carregamento assíncrono para não bloquear a renderização) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
-    <!-- Tailwind CSS -->
-    <!-- AVISO DE PERFORMANCE [CRITICAL]: Em ambiente de produção, remova o script CDN abaixo. 
-         Compile o Tailwind localmente e importe o arquivo CSS estático minificado. -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    },
-                    colors: {
-                        moria: {
-                            red: '#c62828', // Vermelho escuro da fachada
-                            yellow: '#fbc02d', // Amarelo/Dourado da logo
-                            dark: '#111111',
-                            darker: '#0a0a0a'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .gradient-text {
-            background: linear-gradient(to right, #fbc02d, #fff59d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-pattern {
-            background-color: #111111;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23222222' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .whatsapp-float {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-    </style>
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="theme-color" content="#111111">
+    <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="CSS/icons.css">
+    <link rel="stylesheet" href="CSS/css.css">
+    <script src="JavaScript/javascript.js" defer></script>
 </head>
 <body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
     <header class="bg-moria-dark text-white sticky top-0 z-50 shadow-lg border-b border-moria-red/50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             
             <!-- Logo Atualizada (Sem fundo e otimizada) -->
             <a href="#" class="flex items-center group focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded-lg" aria-label="Ir para o início">
-                <img src="logo-removebg-preview.jpg" alt="Logo Depósito Moriá Tend Tudo" width="150" height="48" fetchpriority="high" class="h-12 md:h-16 w-auto object-contain transform transition-transform group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x150/5D4037/fbc02d?text=Dep%C3%B3sito+Mori%C3%A1';">
+                <img src="assets/logo-placeholder.svg" alt="Logo Depósito Moriá Tend Tudo" width="150" height="48" fetchpriority="high" class="h-12 md:h-16 w-auto object-contain transform transition-transform group-hover:scale-105">
             </a>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex gap-8 items-center font-medium text-sm" aria-label="Navegação Principal">
+            <nav class="hidden lg:flex gap-4 xl:gap-8 items-center font-medium text-sm" aria-label="Navegação Principal">
                 <a href="#inicio" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">Início</a>
                 <a href="#categorias" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">Produtos</a>
                 <a href="#sobre" class="hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded px-2 py-1">A Loja</a>
@@ -87,13 +42,13 @@
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-white text-2xl focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded-md p-2">
+            <button type="button" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-white text-2xl focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded-md p-2">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-moria-darker border-t border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-moria-darker border-t border-gray-800">
             <nav class="flex flex-col px-4 py-4 gap-2" aria-label="Navegação Mobile">
                 <a href="#inicio" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">Início</a>
                 <a href="#categorias" class="mobile-link text-white hover:text-moria-yellow hover:bg-gray-800 rounded px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow">Produtos</a>
@@ -103,7 +58,7 @@
         </div>
     </header>
 
-    <main class="flex-grow">
+    <main id="conteudo" class="flex-grow" tabindex="-1">
 
         <!-- Hero Section -->
         <section id="inicio" class="hero-pattern relative text-white py-20 lg:py-32 flex items-center border-b-[8px] border-moria-red">
@@ -141,35 +96,35 @@
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <i class="fa-solid fa-bolt text-2xl text-moria-dark" aria-hidden="true"></i>
                         </div>
                         <h3 class="font-bold text-moria-dark uppercase text-sm">Elétrica</h3>
                     </article>
                     
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <i class="fa-solid fa-faucet-drip text-2xl text-moria-dark" aria-hidden="true"></i>
                         </div>
                         <h3 class="font-bold text-moria-dark uppercase text-sm">Hidráulica</h3>
                     </article>
                     
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <i class="fa-solid fa-paint-roller text-2xl text-moria-dark" aria-hidden="true"></i>
                         </div>
                         <h3 class="font-bold text-moria-dark uppercase text-sm">Tintas</h3>
                     </article>
                     
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <i class="fa-solid fa-toolbox text-2xl text-moria-dark" aria-hidden="true"></i>
                         </div>
                         <h3 class="font-bold text-moria-dark uppercase text-sm">Ferragem</h3>
                     </article>
                     
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <!-- Ícone Corrigido para Parafusos -->
                             <i class="fa-solid fa-screwdriver text-2xl text-moria-dark" aria-hidden="true"></i>
@@ -177,7 +132,7 @@
                         <h3 class="font-bold text-moria-dark uppercase text-sm">Parafusos</h3>
                     </article>
                     
-                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group cursor-pointer focus-within:ring-2 focus-within:ring-moria-yellow">
+                    <article class="bg-gray-50 rounded-xl p-6 text-center border border-gray-200 shadow-sm hover:shadow-lg hover:border-moria-yellow hover:-translate-y-1 transition-all group">
                         <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-inner mb-4 group-hover:bg-moria-yellow transition-colors">
                             <i class="fa-solid fa-blender text-2xl text-moria-dark" aria-hidden="true"></i>
                         </div>
@@ -193,11 +148,11 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     
                     <!-- Imagem da Fachada -->
-                    <div class="w-full lg:w-1/2 relative">
+                    <div class="store-image w-full lg:w-1/2 relative">
                         <div class="absolute -top-4 -left-4 w-24 h-24 bg-moria-red rounded-lg -z-10"></div>
                         <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-moria-yellow rounded-lg -z-10"></div>
                         
-                        <img src="image_038de4.jpg" alt="Fachada do Depósito Moriá" width="800" height="600" loading="lazy" class="w-full h-auto object-cover rounded-xl shadow-2xl relative z-0 border-4 border-gray-800" onerror="this.onerror=null; this.src='https://placehold.co/800x600/171717/facc15?text=Dep%C3%B3sito+Mori%C3%A1+Tend+Tudo'">
+                        <img src="assets/store-placeholder.svg" alt="Fachada do Depósito Moriá" width="800" height="600" loading="lazy" decoding="async" class="w-full h-auto object-cover rounded-xl shadow-2xl relative z-0 border-4 border-gray-800">
                         
                         <div class="absolute bottom-6 left-6 bg-white text-moria-dark font-bold px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-moria-red" aria-hidden="true"></i> Visite-nos!
@@ -261,10 +216,10 @@
                 <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto rounded-full mb-6"></div>
                 
                 <p class="text-gray-600 text-lg md:text-xl mb-10 leading-relaxed">
-                    Siga o nosso Instagram oficial <a href="https://www.instagram.com/deposito.moria/" target="_blank" class="font-bold text-moria-dark hover:text-pink-600 transition-colors">@deposito.moria</a> para ficar por dentro da chegada de novos produtos, dicas valiosas para sua obra e o dia a dia da nossa loja!
+                    Siga o nosso Instagram oficial <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" class="font-bold text-moria-dark hover:text-pink-600 transition-colors">@deposito.moria</a> para ficar por dentro da chegada de novos produtos, dicas valiosas para sua obra e o dia a dia da nossa loja!
                 </p>
                 
-                <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all focus:outline-none focus:ring-4 focus:ring-pink-400">
+                <a href="https://www.instagram.com/deposito.moria/" target="_blank" rel="noopener noreferrer" class="instagram-cta inline-flex items-center justify-center gap-3 bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all focus:outline-none focus:ring-4 focus:ring-pink-400">
                     <i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i> Seguir @deposito.moria
                 </a>
             </div>
@@ -276,7 +231,7 @@
                 <div class="flex flex-col lg:flex-row bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
                     
                     <!-- Contact Info -->
-                    <div class="w-full lg:w-1/3 bg-moria-dark text-white p-10 flex flex-col justify-center relative overflow-hidden">
+                    <div class="contact-panel w-full lg:w-1/3 bg-moria-dark text-white p-10 flex flex-col justify-center relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-moria-red rounded-bl-full opacity-20"></div>
                         <div class="absolute bottom-0 left-0 w-32 h-32 bg-moria-yellow rounded-tr-full opacity-20"></div>
                         
@@ -287,7 +242,7 @@
                                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shrink-0">
                                     <i class="fa-brands fa-whatsapp text-green-400 text-2xl" aria-hidden="true"></i>
                                 </div>
-                                <div>
+                                <div class="contact-details">
                                     <p class="text-gray-400 text-sm mb-1">WhatsApp / Telefone</p>
                                     <a href="https://wa.me/5543996848020" target="_blank" rel="noopener noreferrer" class="font-bold text-xl hover:text-moria-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-moria-yellow rounded">(43) 99684-8020</a>
                                 </div>
@@ -297,7 +252,7 @@
                                 <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-map-location-dot text-moria-red text-xl" aria-hidden="true"></i>
                                 </div>
-                                <div>
+                                <div class="contact-details">
                                     <p class="text-gray-400 text-sm mb-1">Endereço</p>
                                     <p class="font-medium text-base leading-tight pt-1">R. Mal. Hermes da Fonseca, 510<br><span class="text-sm text-gray-300 font-normal">Jardim Sabara, Londrina - PR<br>86188-120</span></p>
                                 </div>
@@ -310,9 +265,10 @@
                     </div>
 
                     <!-- Map iframe -->
-                    <div class="w-full lg:w-2/3 h-96 lg:h-auto min-h-[400px]">
+                    <div class="map-panel relative w-full lg:w-2/3 h-96 lg:h-auto min-h-[400px]">
                         <!-- Utilizamos o parâmetro q=... para garantir que o Pin caia sobre o endereço exato -->
-                        <iframe src="https://maps.google.com/maps?q=R.+Mal.+Hermes+da+Fonseca,+510+-+Jardim+Sabara,+Londrina+-+PR,+86188-120&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="grayscale hover:grayscale-0 transition-all duration-500" title="Mapa de localização do Depósito Moriá em Londrina"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=R.+Mal.+Hermes+da+Fonseca,+510+-+Jardim+Sabara,+Londrina+-+PR,+86188-120&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="grayscale hover:grayscale-0 transition-all duration-500" title="Mapa de localização do Depósito Moriá em Londrina"></iframe>
+                        <a class="map-link" href="https://maps.google.com/maps?q=R.+Mal.+Hermes+da+Fonseca,+510,+Londrina,+PR" target="_blank" rel="noopener noreferrer">Abrir localização no Google Maps</a>
                     </div>
                 </div>
             </div>
@@ -326,11 +282,12 @@
             
             <div class="flex items-center">
                 <!-- Logo Atualizada no Footer -->
-                <img src="logo-removebg-preview.jpg" alt="Logo Depósito Moriá Tend Tudo" width="200" height="80" loading="lazy" class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" onerror="this.onerror=null; this.src='https://placehold.co/200x80/5D4037/fbc02d?text=Mori%C3%A1';">
+                <img src="assets/logo-placeholder.svg" alt="Logo Depósito Moriá Tend Tudo" width="200" height="80" loading="lazy" decoding="async" class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
             </div>
             
             <p class="text-sm text-center">
-                &copy; 2026 Depósito Moriá. Todos os direitos reservados.
+                &copy; 2026 Depósito Moriá. Todos os direitos reservados.<br>
+                <span class="block mt-2">THS - soluções para sua empresa e comércio - 2026</span>
             </p>
             
             <div class="flex gap-4">
@@ -349,48 +306,5 @@
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle com Acessibilidade
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
-            const isHidden = menu.classList.contains('hidden');
-            menu.classList.toggle('hidden');
-            btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-            
-            // Alterar ícone Hamburger para X
-            const icon = btn.querySelector('i');
-            if(isHidden) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        }
-
-        btn.addEventListener('click', toggleMenu);
-
-        // Fechar menu ao clicar num link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.querySelector('i').classList.remove('fa-xmark');
-                btn.querySelector('i').classList.add('fa-bars');
-            });
-        });
-
-        // Fechar menu com a tecla Escape (Acessibilidade)
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
-                toggleMenu();
-                btn.focus();
-            }
-        });
-    </script>
 </body>
 </html>
